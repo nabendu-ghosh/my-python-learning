@@ -44,13 +44,13 @@ def decide_winner(entity1, entity2):
     Takes two players cards as input and decides who is the winner. 
     entity1 is player and entity2 is computer.
     """
-    if calculate_score(users_cards) == calculate_score(computers_cards):
+    if calculate_score(entity1) == calculate_score(entity2):
         print("Draw!")
-    elif calculate_score(users_cards) > 21:
+    elif calculate_score(entity1) > 21:
         print("You went over. You Lose!")
-    elif calculate_score(computers_cards) >21:
+    elif calculate_score(entity2) >21:
         print("Computer Went over. You Win!")
-    elif calculate_score(users_cards) > calculate_score(computers_cards):
+    elif calculate_score(entity1) > calculate_score(entity2):
         print("You scored higher. You Win!")
     else:
         print("You Lose!")
