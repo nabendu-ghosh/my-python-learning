@@ -70,16 +70,31 @@ stages = [r'''
 ''']
 
 # Predefined list of words for the game
-word_list = ["morning", "journey", "weather", "kitchen", "picture",
-    "balance", "freedom", "holiday", "morning", "outside",
-    "payment", "quality", "respect", "silence", "traffic",
-    "village", "warning", "victory", "student", "problem",
-    "opinion", "natural", "message", "library", "justice",
-    "history", "healthy", "fashion", "example", "evening",
-    "culture", "country", "comfort", "brother", "believe",
-    "airport", "ability", "account", "average", "benefit",
-    "chicken", "display", "element", "failure", "general",
-    "harvest", "imagine", "journal", "kitchen", "leather"]
+word_list = [
+    # 4 Letters
+    "atom", "blue", "bolt", "cave", "dark", "dust", "fire", "gate", 
+    "iron", "leaf", "luck", "moon", "rain", "star", "wind", "wolf",
+    
+    # 5 Letters
+    "alarm", "beach", "brain", "candy", "dance", "eagle", "fruit", "glass", 
+    "heart", "light", "music", "night", "party", "river", "smile", "tower",
+    
+    # 6 Letters
+    "bridge", "camera", "castle", "desert", "energy", "forest", "guitar", "island", 
+    "market", "museum", "planet", "rocket", "shadow", "silver", "spirit", "winter",
+    
+    # 7 Letters
+    "ancient", "blanket", "channel", "diamond", "feather", "gravity", "horizon", "journey", 
+    "lantern", "mystery", "octopus", "pyramid", "science", "thunder", "unknown", "volcano",
+    
+    # 8 Letters
+    "birthday", "champion", "daughter", "elephant", "fountain", "hospital", "interest", "language", 
+    "mountain", "neighbor", "platform", "question", "sandwich", "treasure", "umbrella", "vacation",
+    
+    # 9+ Letters
+    "architecture", "celebration", "discovery", "education", "furniture", "happiness", "imagination", "landscape", 
+    "nightmare", "operation", "passenger", "reflection", "satellite", "telephone", "universe", "yesterday"
+]
 
 # Variables for the gam
 chosen_word = random.choice(word_list)
