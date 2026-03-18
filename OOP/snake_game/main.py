@@ -1,19 +1,29 @@
 from snake import Snake
-from turtle import Turtle, Screen
+from food import Food
+from turtle import Screen
 import time
 
-kurmo = Turtle()
 screen = Screen()
 screen.setup(width=600,height=600)
 screen.bgcolor("black")
 screen.title("Snake")
 screen.tracer(0)
 snake = Snake()
+food = Food()
 game_on = True
+
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
 
 while game_on:
     screen.update()
-    time.sleep(.05)
+    time.sleep(.15)
     snake.move()
+
+    if snake.snake_head.distance(food) < 15:
+        food.move_food()
     
 screen.exitonclick()
