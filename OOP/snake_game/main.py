@@ -25,13 +25,22 @@ while game_on:
     time.sleep(.15)
     snake.move()
 
+    # check if snake eats food
     if snake.snake_head.distance(food) < 15:
         food.move_food()
         scoreboard.increase_score()
         snake.extend_tail_onscreen()
     
+    #check if snake hit wall
     if snake.snake_head.xcor() > 290 or snake.snake_head.xcor() < -290 or snake.snake_head.ycor() > 290 or snake.snake_head.ycor() < -290:
         game_on = False
         scoreboard.game_over()
+
+    # check if snake hit itself
+    for tail in snake.snake_body[1:]:
+        if snake.snake_head.distance(tail) <10:
+            game_on = False
+            scoreboard.game_over()
+
     
 screen.exitonclick()
