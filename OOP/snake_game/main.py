@@ -29,4 +29,8 @@ while game_on:
         food.move_food()
         scoreboard.increase_score()
     
+    if snake.snake_head.xcor() > 280 or snake.snake_head.xcor() < -280 or snake.snake_head.ycor() > 280 or snake.snake_head.ycor() < -280:
+        game_on = False
+        scoreboard.game_over()
+    
 screen.exitonclick()
