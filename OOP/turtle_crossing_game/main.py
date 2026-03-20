@@ -1,5 +1,6 @@
 from turtle import Screen
-
+import time
+from cars import Cars
 
 # Set up screen
 screen = Screen()
@@ -9,7 +10,14 @@ screen.setup(width=600,height=600)
 screen.title("Turtle Crossing Road")
 
 # Initialize game
+game_on = True
+cars = Cars()
 
+while game_on:
+    cars.generate_car()
+    cars.move_cars()
+    time.sleep(.1)
+    screen.update()
 
 
 screen.exitonclick()
