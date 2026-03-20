@@ -1,13 +1,19 @@
 from turtle import Turtle
 
 ALIGN = "center"
-FONT = ("Arial", 8, "normal")
+FONT = ("Arial", 16, "bold")
 
 class Level(Turtle):
     def __init__(self):
         super().__init__()
         self.ht()
         self.color("black")
-        self.goto(280,280)
+        self.penup()
+        self.goto(-250,270)
         self.level = 1
+        self.write(arg=f"Level: {self.level}",align=ALIGN,font=FONT)
+    
+    def increase_level(self):
+        self.clear()
+        self.level += 1
         self.write(arg=f"Level ${self.level}",align=ALIGN,font=FONT)

@@ -2,6 +2,7 @@ from turtle import Screen
 import time
 from cars import Cars
 from player_turtle import PlayerTurtle
+from level import Level
 
 # Set up screen
 screen = Screen()
@@ -14,6 +15,7 @@ screen.title("Turtle Crossing Road")
 game_on = True
 cars = Cars()
 player = PlayerTurtle()
+level = Level()
 
 screen.listen()
 screen.onkey(player.move_up, "Up")
@@ -26,6 +28,6 @@ while game_on:
 
     if player.ycor() >= 280:
         player.player_reset()
-
+        level.increase_level()
 
 screen.exitonclick()

@@ -15,7 +15,7 @@ class Cars():
         new_car.shapesize(stretch_len=1.5,stretch_wid=1)
         new_car.color(random.choice(CAR_COLOURS))
         new_car.penup()
-        new_car.goto(START_XCORD,random.randint(-270,270))
+        new_car.goto(START_XCORD,random.randint(-250,260))
         new_car.seth(180)
         self.cars.append(new_car)
     
