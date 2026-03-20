@@ -23,11 +23,15 @@ screen.onkey(player.move_up, "Up")
 while game_on:
     cars.generate_car()
     cars.move_cars()
-    time.sleep(.1)
+    time.sleep(level.car_speed)
     screen.update()
 
     if player.ycor() >= 280:
         player.player_reset()
         level.increase_level()
+    
+    for car in cars.cars:
+        if player.distance(car) < 25:
+            game_on = False
 
 screen.exitonclick()

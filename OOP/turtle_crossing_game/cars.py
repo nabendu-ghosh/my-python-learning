@@ -22,6 +22,8 @@ class Cars():
     def move_cars(self):
         for car in self.cars:
             car.forward(MOVE)
+            if car.xcor() < -310:
+                self.cars.remove(car)
             
     
 

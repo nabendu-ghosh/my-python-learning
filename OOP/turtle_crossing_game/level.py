@@ -12,8 +12,10 @@ class Level(Turtle):
         self.goto(-250,270)
         self.level = 1
         self.write(arg=f"Level: {self.level}",align=ALIGN,font=FONT)
+        self.car_speed = 0.2
     
     def increase_level(self):
         self.clear()
         self.level += 1
-        self.write(arg=f"Level ${self.level}",align=ALIGN,font=FONT)
+        self.write(arg=f"Level {self.level}",align=ALIGN,font=FONT)
+        self.car_speed *= 0.5
