@@ -3,6 +3,7 @@ import time
 from cars import Cars
 from player_turtle import PlayerTurtle
 from level import Level
+import random
 
 # Set up screen
 screen = Screen()
@@ -13,6 +14,7 @@ screen.title("Turtle Crossing Road")
 
 # Initialize game
 game_on = True
+random_car = 0
 cars = Cars()
 player = PlayerTurtle()
 level = Level()
@@ -21,7 +23,9 @@ screen.listen()
 screen.onkey(player.move_up, "Up")
 
 while game_on:
-    cars.generate_car()
+    random_car = random.randint(1,3)
+    if random_car == 1:
+        cars.generate_car()
     cars.move_cars()
     time.sleep(level.car_speed)
     screen.update()

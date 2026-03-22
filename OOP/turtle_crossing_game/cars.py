@@ -22,11 +22,8 @@ class Cars():
         self.cars.append(new_car)
     
     def move_cars(self):
-        for car in self.cars:
+        for car in self.cars[:]:
             car.forward(MOVE)
             if car.xcor() < -310:
+                car.ht()
                 self.cars.remove(car)
-            
-    
-
-
