@@ -28,7 +28,6 @@ while game_on:
         cars.generate_car()
     cars.move_cars()
     time.sleep(level.car_speed)
-    screen.update()
 
     if player.ycor() >= 280:
         player.player_reset()
@@ -37,5 +36,8 @@ while game_on:
     for car in cars.cars:
         if player.distance(car) < 25:
             game_on = False
+            level.game_over()
+    
+    screen.update()
 
 screen.exitonclick()
