@@ -10,7 +10,6 @@ turtle.shape(image)
 states_data = pandas.read_csv("OOP/us_states_quiz/50_states.csv")
 states = states_data.state.to_list()
 guessed_states = []
-missing_states = []
 
 while len(guessed_states) < 50:
     
@@ -31,9 +30,6 @@ while len(guessed_states) < 50:
 if len(guessed_states) < 50:
     print("Generating csv file with the states to learn")
 
-    for state in states:
-        if state not in guessed_states:
-            missing_states.append(state)
-    
+    missing_states = [state for state in states if state not in guessed_states]
     new_df = pandas.DataFrame(missing_states)
     new_df.to_csv("OOP/us_states_quiz/states_to_learn.csv")
