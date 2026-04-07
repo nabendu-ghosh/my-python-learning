@@ -1,6 +1,6 @@
-from data import question_data
-from question_model import Question
-from quiz_brain import Quizbrain
+from intermediate.OOP.quiz_game.data import question_data
+from intermediate.OOP.quiz_game.question_model import Question
+from intermediate.OOP.quiz_game.quiz_brain import Quizbrain
 
 question_bank = []
 

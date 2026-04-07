@@ -1,6 +1,6 @@
 import turtle as t
 import random
-from extract_colour import ExtractColours
+from intermediate.OOP.dot_art.extract_colour import ExtractColours
 
 kurmo = t.Turtle()
 screen = t.Screen()
