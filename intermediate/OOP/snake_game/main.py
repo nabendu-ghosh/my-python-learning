@@ -1,6 +1,6 @@
-from intermediate.OOP.snake_game.snake import Snake
-from intermediate.OOP.snake_game.food import Food
-from intermediate.OOP.snake_game.scoreboard import Scoreboard
+from snake import Snake
+from food import Food
+from scoreboard import Scoreboard
 from turtle import Screen
 import time
 

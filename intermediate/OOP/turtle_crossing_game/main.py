@@ -1,8 +1,8 @@
 from turtle import Screen
 import time
-from intermediate.OOP.turtle_crossing_game.cars import Cars
-from intermediate.OOP.turtle_crossing_game.player_turtle import PlayerTurtle
-from intermediate.OOP.turtle_crossing_game.level import Level
+from cars import Cars
+from player_turtle import PlayerTurtle
+from level import Level
 import random
 
 # Set up screen
