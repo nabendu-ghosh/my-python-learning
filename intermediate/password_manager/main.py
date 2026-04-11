@@ -71,7 +71,7 @@ def get_password():
     except KeyError:
         messagebox.showinfo(title="Oops", message="No Data Found")
     else:
-        messagebox.showinfo(title="website_entry.get()", message=f"Email: {data[website_entry.get()]["Email"]}\n"
+        messagebox.showinfo(title=website_entry.get(), message=f"Email: {data[website_entry.get()]["Email"]}\n"
                             f"Password: {data[website_entry.get()]["Password"]}")
         print(data[website_entry.get()])
 
