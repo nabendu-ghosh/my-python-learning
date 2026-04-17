@@ -68,12 +68,13 @@ def get_password():
     
     try:
         data[website_entry.get()]
+    except FileNotFoundError:
+        messagebox.showinfo(title="Oops", message="No Data File Found")
     except KeyError:
-        messagebox.showinfo(title="Oops", message="No Data Found")
+        messagebox.showinfo(title="Oops", message="No Data Found in Saved Passwords")
     else:
         messagebox.showinfo(title=website_entry.get(), message=f"Email: {data[website_entry.get()]["Email"]}\n"
                             f"Password: {data[website_entry.get()]["Password"]}")
-        print(data[website_entry.get()])
 
 # ---------------------------- UI SETUP ------------------------------- #
 
